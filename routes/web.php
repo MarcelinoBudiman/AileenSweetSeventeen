@@ -28,8 +28,6 @@ Route::get('/content', function () {
 
 Route::resource('tamus', TamuController::class)->middleware('auth');
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // routes/web.php
@@ -37,5 +35,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::post('/wishes', [App\Http\Controllers\WishController::class, 'store']);
 
 Route::get('/load-data', [App\Http\Controllers\HomeController::class, 'loadData']);
-
-
